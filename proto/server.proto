@@ -1,0 +1,17 @@
+syntax = "proto3";
+
+package cache;
+
+option go_package = "./cache";
+
+message req{
+    string key = 1;
+}
+
+message res{
+    string key = 1;
+}
+
+service Addservice {
+    rpc Add(req) returns (res);
+}
